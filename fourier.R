@@ -3,7 +3,7 @@ transfourier = function(time,variable,npeaks) {
   #Plot the raw data (turn this line into a comment if unnecessary)
   plot(time,variable,type="l",xlab="time",ylab="variable",main="Variable vs. time")
   
-  #Prepare the time series: it should start at zero
+  #Prepare the time series: it should start at zero or else we get the frequency step wrong 
   time = time - min(time)
   
   #Measure data series length, and define Nyquist frequency (sampling freq. / 2 ) and frequency range
