@@ -11,4 +11,5 @@ Little R scripts that don't deserve a repository of their own. So far:
   ```
 Which results in:
 ![](https://github.com/malmriv/malmriv.github.io/blob/master/_posts/images/flag.png?raw=true)
+
 (The trick is to plot a matrix with increasing values using only six different colours astutely picked from a rainbow palette; the aspect ratio can be set to an adequate value, and the axix and labels can be turned off).
