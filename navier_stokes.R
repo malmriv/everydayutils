@@ -166,7 +166,7 @@ for(t in time) {
   v[imax + 1, ] = v_rig
   }
 #Mostramos la representación de la presión como matriz y también la aproximación
-#continua (las líneas de contorno asignadas a la matriz de velocidades)
+#continua (las líneas de contorno asgnadas a la matriz de velocidades)
 filled.contour(sqrt(u^2+v^2),main="Velocidad del fluido: tapa deslizante.",nlevels = 50,
                col=rev(viridis(50)))
 image(sqrt(u^2+v^2),main="Velocidad del fluido: tapa deslizante.",

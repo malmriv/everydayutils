@@ -25,5 +25,3 @@ for(k in 1:length(theta)) {
   lines(xtraj[1:k],ytraj[1:k],cex=0.1,col="black")
   dev.off()
 }
-
-
