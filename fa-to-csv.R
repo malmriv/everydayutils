@@ -4,7 +4,7 @@ library(rvest)
 library(stringr)
 
 #Read user related information: user id and number of pages to parse
-id = "958982"
+id = "XXXXXXX"
 pages = 20
 
 #Generate vectors in which we will save info
@@ -32,11 +32,11 @@ for(i in 1:pages) {
     #but parsing the .png file with the number of stars returns a URL where the
     #actual rating can be extracted from
     
-    rating = sub("/imgs/myratings/","",xml_attrs(xml_child(ratings[[j]], 1))[["src"]])
+    rating = sub("https://filmaffinity.com/images/myratings/","",xml_attrs(xml_child(ratings[[j]], 1))[["src"]])
     rating = sub(".png","",rating)
     rating = sub("_","",rating)
     rating = as.integer(rating)
-  
+    
     #Now we add this info to our data frame (unless it's a TV show)
     if(!str_detect(title,"TV")) df[(i-1)*30+j,] = c(title,director,rating)
   }
